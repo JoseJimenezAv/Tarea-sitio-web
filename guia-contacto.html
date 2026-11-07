@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio de Periféricos Gamer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <style>
+        .heroGuia{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid var(--colorGris);
+        }
+
+        .heroGuia > div {
+            width: 1339px;
+            height: 468px;
+            padding: 89px 89px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heroContenido{
+            width: 580px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .heroContenido > span::before{
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 1px;
+            background-color: var(--colorLima);
+            border-radius: 2px;
+        }
+
+        .heroContenido > span{
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 600; 
+            font-size: 11px; 
+            letter-spacing: 1.76px;
+        }
+
+        .heroContenido > h1{
+            width: 100%;
+            height: auto;
+            font-weight: 600; 
+            font-size: 82px; 
+            letter-spacing: -4.51px;
+        }
+
+        .heroContenido > p{
+            width: 100%;
+            height: auto;
+            font-weight: 400; 
+            font-size: 16px;
+        }
+
+        .heroGuiaVisual{
+            width: 300px;
+            height: 222px;
+            padding: 24px;
+            background-color: var(--colorGrizAzulado);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .heroGuiaVisual span{
+            width: auto;
+            height: auto;
+            font-weight: 600; 
+            font-size: 9px; 
+            letter-spacing: 0.9px;
+        }
+
+        .heroGuiaVisual h2{
+            width: 100%;
+            height: auto;
+            font-weight: 600; 
+            font-size: 25px;
+        }
+
+        .heroGuiaVisual ol{
+            width: 250px;
+            height: auto;
+            padding-left: 25px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: 400; 
+            font-size: 12px;
+        }
+
+        .seccionGuia{
+            display: flex;
+            justify-content: center;
+        }
+
+        .seccionGuia > div{
+            width: 1156px;
+            height: auto;
+            padding: 100px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .seccionGuiaEncabezado{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .seccionGuiaEncabezado span{
+            width: 100%;
+            height: auto;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 1.76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .seccionGuiaEncabezado > span::before{
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 1px;
+            background-color: var(--colorLima);
+            border-radius: 2px;
+        }
+
+        .seccionGuiaEncabezado h2{
+            width: 100%;
+            height: auto;
+            font-weight: 600;
+            font-size: 48px;
+            letter-spacing: -1.91px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .seccionGuiaCategorias{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 16px;
+            column-gap: 16px;
+        }
+
+        .seccionGuiaCategorias article{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+        }
+
+        .seccionContacto{
+            display: flex;
+            justify-content: center;
+        }
+
+        .seccionContacto > div{
+            width: 1156px;
+            height: 480px;
+            padding: 52px;
+            background-color: var(--colorGrizAzulado);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .seccionContactoGuia{
+            width: 406px;
+            height: 374px;
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px;
+        }
+
+        .seccionContactoGuia > span{
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 600; 
+            font-size: 11px; 
+            letter-spacing: 1.76px;
+        }
+
+        .seccionContactoGuia > span::before{
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 1px;
+            background-color: var(--colorLima);
+            border-radius: 2px;
+        }
+
+        .seccionContactoGuia > h2{
+            width: 100%;
+            height: auto;
+            font-weight: 600;
+            font-size: 48px;
+            letter-spacing: -1.91px;
+        }
+
+        .seccionContactoGuia > p{
+            width: 100%;
+            height: auto;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .formulario{
+            width: 496px;
+            height: 374px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .formularioNombreCorreo{
+            display: flex; 
+            width: 100%; 
+            gap: 14px;
+        }
+
+        .formularioNombreCorreo div{
+            display: flex; 
+            flex-direction: column; 
+            gap: 7px; 
+            width: 50%;
+        }
+
+        .formulario label{
+            font-family: var(--fuenteSecundaria);
+            font-weight: 600;
+            font-size: 11px;
+            color: var(--colorBlanco);
+        }
+
+        .formulario input,
+        .formulario select,
+        .formulario textarea{
+            width: 100%;
+            height: 45px;
+            resize: none;
+            padding: 12px 13px;
+            background-color: var(--fondo);
+            color: var(--colorGris);
+            border: 1px solid color-mix(in srgb, var(--colorBlanco) 12%, transparent);
+        }
+
+        .formulario textarea{
+            height: 122px;
+        }
+        
+        .formulario input:focus,
+        .formulario select:focus,
+        .formulario textarea:focus{
+            color: var(--colorBlanco);
+            border-color: var(--colorLima);
+            outline: none;
+        }
+
+        .formulario input:not(:placeholder-shown),
+        .formulario select:not(:placeholder-shown),
+        .formulario textarea:not(:placeholder-shown){
+            color: var(--colorBlanco);
+        }
+
+        .formulario button{
+            width: 100%;
+            height: 44px;
+            padding: 0px 18px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .formulario button:hover{
+            transform: translateY(-5px)
+        }
+
+        /*RESPONSIVE*/
+        @media (max-width: 768px){
+            .heroGuia > div{
+                width: 753px;
+                height: auto;
+                padding: 70px 20px;
+            }
+
+            .heroContenido{
+                width: 349px;
+                height: auto;
+            }
+
+            .heroContenido h1{
+                font-size: 52px;
+                letter-spacing: -2.86px;
+            }
+
+            .seccionGuia > div{
+                width: 711px;
+                height: auto;
+            }
+
+            .seccionGuiaEncabezado h2{
+                font-size: 34px;
+                letter-spacing: -1.36px;
+            }
+
+            .seccionContacto > div{
+                width: 711px;
+                height: 452px;
+                padding: 38px;
+            }
+
+            .seccionContactoGuia{
+                width: 267px;
+                height: 374px;
+            }
+
+            .seccionContactoGuia > h2{
+                font-size: 34px;
+                letter-spacing: -1.36px;
+            }
+
+            .formulario{
+                width: 326px;
+            }
+        }
+
+        @media (max-width: 425px){
+            .heroGuia > div{
+                width: 379px;
+                height: auto;
+                padding: 90px 15px;
+                flex-direction: column;
+                gap: 74px;
+            }
+
+            .heroContenido{
+                width: 348px;
+                height: auto;
+            }
+
+            .heroContenido h1{
+                font-size: 55px;
+                letter-spacing: -3.03px;
+            }
+
+            .heroGuiaVisual{
+                width: 348px;
+            }
+
+            .seccionGuia > div{
+                width: 347px;
+                height: auto;
+                padding: 74px 0;
+            }
+
+            .seccionGuiaCategorias{
+                display: flex;
+                flex-direction: column;  
+            }
+
+            .seccionContacto > div{
+                width: 347px;
+                height: 851px;
+                padding: 28px 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .seccionContactoGuia{
+                width: 304px;
+                height: 295px;
+            }
+
+            .formulario{
+                width: 304px;
+                height: 458px;
+            }
+
+            .formularioNombreCorreo{
+                flex-direction: column;
+            }
+
+            .formularioNombreCorreo div{
+                width: 100%;
+            }
+        }        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-encabezado">
+            <a href="index.html" class="marca">GAMER<span>LAB</span></a>
+            
+            <input type="checkbox" id="menuHamburguesa">
+            <label for="menuHamburguesa" class="hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <div class="navegacion">
+                <nav>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="catalogo.html">Catálogo</a></p>
+                    <p><a href="guia-contacto.html" class="active">Guía y Contacto</a></p>
+                </nav>
+                <a href="catalogo.html" class="btnExplorarProductos">
+                    Explorar productos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right preview-icon"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main style="width: 100%; height: auto; margin-bottom: 100px;">
+        <section class="heroGuia">
+            <div>
+                <div class="heroContenido">
+                    <span style="font-family: var(--fuenteSecundaria); color: var(--colorLima)">GUÍA DE ELECCIÓN</span>
+                    <h1 style="font-family: var(--fuenteBase); color: var(--colorBlanco);">Elige según cómo <span style="color: var(--colorLima);">juegas.</span></h1>
+                    <p style="font-family:  var(--fuenteSecundaria); color: var(--colorGris);">Cada género exige algo distinto. Aprende a priorizar las especificaciones que si cambian tu experiencia.</p>
+                </div>
+    
+                <aside class="heroGuiaVisual">
+                    <span style="font-family: var(--fuenteSecundaria); color: var(--colorLima);">ANTES DE COMPRAR</span>
+                    <h2 style="font-family: var(--fuenteBase); color: var(--colorBlanco);">Define tres cosas</h2>
+                    <ol>
+                        <li style="font-family: var(--fuenteSecundaria); color: var(--colorGris);">Tipo de juego</li>
+                        <li style="font-family: var(--fuenteSecundaria); color: var(--colorGris);">Presupuesto disponible</li>
+                        <li style="font-family: var(--fuenteSecundaria); color: var(--colorGris);">Tiempo de uso diario</li>
+                    </ol>
+                </aside>
+            </div>
+        </section>
+
+        <section class="seccionGuia">
+            <div>
+                <div class="seccionGuiaEncabezado">
+                    <span style="font-family: var(--fuenteSecundaria); color: var(--colorLima);">POR TIPO DE JUEGO</span>
+                    <h2 style="font-family: var(--fuenteBase); color: var(--colorBlanco);">Lo que debes priorizar</h2>
+                </div>
+
+                <div class="seccionGuiaCategorias">
+                   <article style="width: 100%; height: auto; padding: 28px; background-color: var(--colorGrizAzulado); border: 1px solid color-mix(in srgb, var(--colorBlanco) 12%, transparent);">
+                        <small style="font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 9px; letter-spacing: 0.63px; color: var(--colorLima);">FPS / COMPETITIVO</small>
+                        <h3 style="width: 100%; height: auto; font-family: var(--fuenteBase); font-weight: 600; font-size: 23px; color: var(--colorBlanco);">Precisión antes que efectos</h3>
+                        <p style="width: 100%; height: auto; font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 13px; color: var(--colorGris);">Prioriza un mouse ligero de sensor estable, monitor de 144 Hz o más y teclado con actuación rápida.</p>
+                   </article>
+
+                   <article style="width: 100%; height: auto; padding: 28px; background-color: var(--colorGrizAzulado); border: 1px solid color-mix(in srgb, var(--colorBlanco) 12%, transparent);">
+                        <small style="font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 9px; letter-spacing: 0.63px; color: var(--colorLima);">RPG / AVENTURA</small>
+                        <h3 style="width: 100%; height: auto; font-family: var(--fuenteBase); font-weight: 600; font-size: 23px; color: var(--colorBlanco);">Inmersión y comodidad</h3>
+                        <p style="width: 100%; height: auto; font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 13px; color: var(--colorGris);">El audio espacial y una postura estable importan más en sesiones largas. Busca memoria de perfiles y buen soporte.</p>
+                   </article>
+
+                   <article style="width: 100%; height: auto; padding: 28px; background-color: var(--colorGrizAzulado); border: 1px solid color-mix(in srgb, var(--colorBlanco) 12%, transparent);">
+                        <small style="font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 9px; letter-spacing: 0.63px; color: var(--colorLima);">MOBA / ESTRATEGIA</small>
+                        <h3 style="width: 100%; height: auto; font-family: var(--fuenteBase); font-weight: 600; font-size: 23px; color: var(--colorBlanco);">Control y accesos directos</h3>
+                        <p style="width: 100%; height: auto; font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 13px; color: var(--colorGris);">Elige botones programables, teclas consistentes y espacio suficiente para movimientos amplios y repetibles.</p>
+                   </article>
+
+                   <article style="width: 100%; height: auto; padding: 28px; background-color: var(--colorGrizAzulado); border: 1px solid color-mix(in srgb, var(--colorBlanco) 12%, transparent);">
+                        <small style="font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 9px; letter-spacing: 0.63px; color: var(--colorLima);">SIMULACIÓN / RACING</small>
+                        <h3 style="width: 100%; height: auto; font-family: var(--fuenteBase); font-weight: 600; font-size: 23px; color: var(--colorBlanco);">Campo visual y realismo</h3>
+                        <p style="width: 100%; height: auto; font-family: var(--fuenteSecundaria); font-weight: 400; font-size: 13px; color: var(--colorGris);">Un monitor ultrawide o doble pantalla eleva la lectura periférica. Añade audio detallado y asiento ajustable.</p>
+                   </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccionContacto">
+            <div>
+                <div class="seccionContactoGuia">
+                    <span style="font-family: var(--fuenteSecundaria); color: var(--colorLima);">¿AÚN TIENES DUDAS?</span>
+                    <h2 style="font-family: var(--fuenteBase); color: var(--colorBlanco);">Hablemos de tu próximo setup.</h2>
+                    <p style="font-family: var(--fuenteSecundaria); color: var(--colorGris); margin-bottom: 20px;">Cuéntanos qué juegas, cúal es tu presupuesto y qué quieres mejorar. Te ayudaremos a ordenar tus prioridades.</p>
+                    <ol style="display: flex; flex-direction: column; gap: 15px; font-family: var(--fuenteSecundaria); font-size: 12px; color: var(--colorBlanco); list-style-type: none;">
+                        <li style="width: 100%; height: auto; display: inline-flex; gap: 10px;"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C7FF3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check preview-icon"><path d="M20 6 9 17l-5-5"/></svg>
+                            Orientación sin costo
+                        </li>
+                        <li style="width: 100%; height: auto; display: inline-flex; gap: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C7FF3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check preview-icon"><path d="M20 6 9 17l-5-5"/></svg>
+                            Respuesta académica y objetiva
+                        </li>
+                        <li style="width: 100%; height: auto; display: inline-flex; gap: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C7FF3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check preview-icon"><path d="M20 6 9 17l-5-5"/></svg>
+                            Sin compromiso de compra
+                        </li>
+                    </ol>
+                </div>
+
+                <form action="enviarConsulta" class="formulario">
+                    <div class="formularioNombreCorreo">
+                        <div>
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                        </div>
+
+                        <div>
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 7px;">
+                        <label for="preferencia-juego">¿Qué tipo de juego prefieres?</label>
+                        <select name="seleccion" id="preferencia-juego" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="fps/competitivo">FPS / COMPETITIVO</option>
+                            <option value="rpg/aventura">RPG / AVENTURA</option>
+                            <option value="moba/estrategia">MOBA /ESTRATEGIA</option>
+                            <option value="simulacion/racing">SIMULACION / RACING</option>
+                            <option value="usoMixto">USO MIXTO</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 7px;">
+                        <label for="mensajeConsulta">Tu consulta</label>
+                        <textarea name="mensajeConsulta" id="mensajeConsulta" placeholder="Cuéntanos qué periférico buscas o qué deseas mejorar..."  required></textarea>
+                    </div>
+
+                    <button style="font-family: var(--fuenteSecundaria); background-color: var(--colorLima); border: 0;">Enviar consulta</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerContenido">
+            <a href="index.html" class="marca">GAMER<span>LAB</span></a>
+            <nav>
+                <p><a href="index.html" class="active">Inicio</a></p>
+                <p><a href="catalogo.html">Catálogo</a></p>
+                <p><a href="guia-contacto.html">Guía y Contacto</a></p>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

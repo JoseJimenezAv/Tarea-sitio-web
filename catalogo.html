@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio de Periféricos Gamer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <style>
+        .heroCatalogo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid var(--colorGris);
+        }
+
+        .heroCatalogo > div{
+            width: 1339px;
+            height: 540px;
+            padding: 0 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .heroCatalogoContenedor{
+            width: 642px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .heroCatalogoContenedor span{
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--fuenteSecundaria);
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 1.76px;
+            color: var(--colorLima);
+        }
+
+        .heroCatalogoContenedor > span::before{
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 1px;
+            background-color: var(--colorLima);
+            border-radius: 2px;
+        }
+
+        .heroCatalogoContenedor > h1,
+        .heroCatalogoContenedor > h1 > span{
+            /* width: 650px; */
+            width: 100%;
+            height: auto;
+            font-family: var(--fuenteBase);
+            font-weight: 600;
+            font-size: 74px;
+            letter-spacing: -4.06px;
+            color: var(--colorBlanco);
+        }
+
+        .heroCatalogoContenedor p{
+            width: 100%;
+            height: auto;
+            font-family: var(--fuenteSecundaria);
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--colorGris);
+        }
+
+        .catalogo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 80px;
+            margin-top: 80px;
+        }
+
+        .catalogoGrid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 18px;
+            row-gap: 18px;
+        }
+
+        .catalogoTarjetas{
+            width: 348px;
+            height: 409px;
+            background-color: var(--colorGrizAzulado);
+            border: 1px solid color-mix(in srgb, var(--colorBlanco) 12%, transparent);
+        }
+
+        .catalogoTarjetas:hover{
+            border: 1px solid var(--colorLima);
+        }
+
+        .contenedorImagen{
+            width: 100%;
+            height: 259px;
+            background: linear-gradient(135deg, #181a20 0%, #0f2b1d 100%);
+            border-bottom: 1px solid var(--colorLima);
+            overflow: hidden;
+        }
+
+        .contenedorImagen > img{
+            width: 340px;
+            height: 250px;
+            object-fit: contain;
+            object-position: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .catalogoTarjetas:hover img{
+            transform: scale(1.10);
+        }
+
+        .contenedorTexto{
+            width: 100%;
+            height: 148px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contenedorTexto h2{
+            width: 100%;
+            height: 28px;
+            font-family: var(--fuenteBase);
+            font-weight: 600;
+            font-size: 21px;
+            color: var(--colorBlanco);
+        }
+
+        .contenedorTexto p{
+            width: 100%;
+            height: 19px;
+            font-family: var(--fuenteSecundaria);
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--colorGris);
+        }
+
+        .contenedorTexto a{
+            width: 73px;
+            height: 38px;
+            padding: 9px 14px;
+            margin-top: 18px;
+            font-family: var(--fuenteSecundaria);
+            font-weight: 600;
+            font-size: 11px;
+            color: var(--colorLima);
+            border: 1px solid var(--colorLima);
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .contenedorTexto a:hover{
+            background-color: var(--colorLima);
+            color: #000000;
+        }
+
+
+        @media (max-width: 768px){
+            .heroCatalogo > div{
+                width: 751px;
+                padding: 0 20px;
+            }
+
+            .heroCatalogoContenedor{
+                width: 580px;
+            }
+
+            .heroCatalogoContenedor > h1,
+            .heroCatalogoContenedor > h1 > span{
+                font-size: 55px;
+                letter-spacing: -2.68px;
+            }
+
+            .catalogoGrid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 425px) {
+            .heroCatalogo > div{
+                width: 377px;
+                padding: 0 15px;
+            }
+
+            .heroCatalogoContenedor{
+                width: 347px;
+            }
+
+            .catalogoGrid{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-encabezado">
+            <a href="index.html" class="marca">GAMER<span>LAB</span></a>
+            
+            <input type="checkbox" id="menuHamburguesa">
+            <label for="menuHamburguesa" class="hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <div class="navegacion">
+                <nav>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="catalogo.html" class="active">Catálogo</a></p>
+                    <p><a href="guia-contacto.html">Guía y Contacto</a></p>
+                </nav>
+                <a href="catalogo.html" class="btnExplorarProductos">
+                    Explorar productos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right preview-icon"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="heroCatalogo">
+            <div>
+                <div class="heroCatalogoContenedor">
+                    <span>SELECCIÓN 2026</span>
+                    <h1>Nuestros Periféricos<span style="color: var(--colorLima);">Destacados</span></h1>
+                    <p>Una selección curada para mejorar precisión, inmersión y comodidad sin perder de vista el presupuesto.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="catalogo">
+            <div class="catalogoGrid">
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Logitech-G-Pro-X-Keyboard.png" alt="Logitech G Pro X Keyboard">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Logitech G Pro X Keyboard</h2>
+                        <p>Teclado Mecánico - $130.00</p>
+                        <a href="https://www.logitechg.com/es-mx/shop/p/pro-x-tkl-wireless-keyboard.920-012127?sp=2&searchclick=Logitech%20G" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Redragon-Kumara-K552.png" alt="Redragon Kumara K552">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Redragon Kumara K552</h2>
+                        <p>Teclado Mecánico - $45.00</p>
+                        <a href="https://redragon.es/products/best-seller/teclado-mecanico-tkl-kumara-k552/" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Razer-BlackWidow-V4.webp" alt="Razer BlackWidow V4">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Razer BlackWidow V4</h2>
+                        <p>Teclado Mecánico - $200.00</p>
+                        <a href="https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-low-profile-hyperspeed/RZ03-05450600-R3U1" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Logitech-G-Pro-X-Superlight.webp" alt="Logitech G Pro X Superlight">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Logitech G Pro X Superlight</h2>
+                        <p>Mouses Óptico - $120.00</p>
+                        <a href="https://www.logitechg.com/es-mx/shop/p/pro-x-superlight-2-dex-se.910-007832?sp=2&searchclick=Logitech%20G" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Razer-DeathAdder-V3-Pro.png" alt="Razer DeathAdder V3 Pro">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Razer DeathAdder V3 Pro</h2>
+                        <p>Mouses Óptico - $130.00</p>
+                        <a href="https://www.razer.com/gaming-mice/razer-deathadder-v3-pro/RZHB-230512-01" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/HyperX-Cloud-II.webp" alt="HyperX Cloud II">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>HyperX Cloud II</h2>
+                        <p>Audífono Gamer - $80.00</p>
+                        <a href="https://hyperx.com/products/hyperx-cloud-ii?_pos=1&_sid=835459e98&_ss=r" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Logitech-G435-Lightspeed.png" alt="Logitech G435 Lightspeed">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Logitech G435 Lightspeed</h2>
+                        <p>Audífono Gamer - $70.00</p>
+                        <a href="https://www.logitechg.com/es-ar/shop/p/g435-wireless-bluetooth-gaming-headset.981-001049" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Razer-BlackShark-V2.webp" alt="Razer BlackShark V2">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Razer BlackShark V2</h2>
+                        <p>Audífono Gamer - $65.00</p>
+                        <a href="https://www.razer.com/gaming-headsets/razer-blackshark-v2-x/RZ04-03240700-R3U1" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/ASUS-TUF-Gaming-VG249Q.png" alt="ASUS TUF Gaming VG249Q">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>ASUS TUF Gaming VG249Q</h2>
+                        <p>Monitores de Alta frecuencia - $210.00</p>
+                        <a href="https://www.asus.com/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg249q/" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/LG-UltraGear-24GN600.png" alt="LG UltraGear 24GN600">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>LG UltraGear 24GN600</h2>
+                        <p>Monitor de Alta frecuencia - $180.00</p>
+                        <a href="https://www.lg.com/es/monitores/monitores-ultragear-gaming/24gn60r-b/" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Corsair-T3-Rush.webp" alt="Corsair T3 Rush">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Corsair T3 Rush</h2>
+                        <p>Silla Ergonómica - $300.00</p>
+                        <a href="https://www.corsair.com/es/es/p/gaming-chairs/cf-9010029-ww/t3-rush-gaming-chair-charcoal-cf-9010029-ww" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+
+                <article class="catalogoTarjetas">
+                    <div class="contenedorImagen">
+                        <img src="../img/Cougar-Armor-S.png" alt="Cougar Armor S">
+                    </div>
+                    <div class="contenedorTexto">
+                        <h2>Cougar Armor S</h2>
+                        <p>Silla Ergonómica - $270.00</p>
+                        <a href="https://cougargaming.com/ee/products/chairs/armor_s/" target="_blank" rel="noopener noreferrer">Ver más</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerContenido">
+            <a href="index.html" class="marca">GAMER<span>LAB</span></a>
+            <nav>
+                <p><a href="index.html" class="active">Inicio</a></p>
+                <p><a href="catalogo.html">Catálogo</a></p>
+                <p><a href="guia-contacto.html">Guía y Contacto</a></p>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
